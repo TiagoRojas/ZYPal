@@ -25,6 +25,9 @@ body{
 .nav-item:hover{
     background-color: #0a58ca;
 }
+.navbar-icon{
+    width: 50px;
+}
 @media all and (max-width:990px){
     .nav-item{
         border: none;
