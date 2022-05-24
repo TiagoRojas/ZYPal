@@ -1,0 +1,172 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap');
+body{
+    background-color: #f0f0f0;
+}
+.nav-item{
+    border-right: 1px solid #fff;
+}
+.nav-item:first-child{
+    border-left: 1px solid #fff;
+}
+.nav-item:last-child{
+    border: none;
+}
+@media all and (max-width:990px){
+    .nav-item{
+        border: none;
+    }
+    .nav-item:first-child{
+        border: none;
+    }
+}
+#banner{
+    position: relative;
+    background-image: url('../assets/mainbg.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 750px;
+    height: 50vh;
+}
+#bannercolor{
+    position: absolute;
+    background-color: rgba(13, 110, 253, 0.3);
+    width: 100%;
+    height: 100%;
+}
+.main{
+    z-index: 2;
+    width: 100%;
+}
+.main h1{
+    font-size: 5rem;
+    font-weight: 700;
+    animation-name: desenfoque;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-iteration-count: 1;
+}
+@keyframes desenfoque{
+    0%{
+      letter-spacing: 2rem;
+      filter: blur(12px);
+      opacity: 0;
+    }
+    100%{
+      filter: blur(0);
+      opacity: 1;
+    }
+}
+@media all and (min-width:992px){
+    @keyframes desenfoque{
+        0%{
+          letter-spacing: 1em;
+          filter: blur(12px);
+          opacity: 0;
+        }
+        100%{
+          filter: blur(0);
+          opacity: 1;
+        }
+    }
+}
+.hero{
+    display: inline-block;
+}
+.hero a{
+    font-size: 1.5rem;
+}
+.arrow{
+    animation-name: arrow-movement;
+    animation-duration: 1.5s;
+    animation-timing-function: ease;
+    animation-iteration-count: infinite;
+    animation-direction: alternate-reverse;
+  }
+@keyframes arrow-movement{
+    0%{
+      transform: translateY(0);
+    }
+    100%{
+      transform: translateY(15px);
+    }
+}
+.arrow a img{
+    width: 80px;
+}
+.infotext{
+    font-size: 1.2rem;
+}
+.containertext{
+    width: 80%;
+}
+.text{
+    width: 100%;
+    background: #f0f0f0;
+}
+@media all and (max-width:990px){
+    .containertext{
+        width: 90%;
+    }
+}
+#infoC{
+    width: 70%;
+}
+#infoC img{
+    width: 80px;
+}
+.infocard{
+    width: 33,33333%;
+    border: 5px solid linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(0,212,255,1) 100%);
+}
+@media all and (max-width:990px){
+    #infoC{
+        width: 100%;
+    }
+}
+.heroc{
+    border-bottom: 5px solid #ccc;
+    width: 90%;
+  }
+.card{
+    width: 50%;
+    border: none;
+    background-color: #f0f0f0;
+}
+@media all and (max-width:990px){
+    .card{
+        width: 70%;
+    }
+    .module{
+        width: 100%;
+    }
+}
+.textcontact{
+    width: 80%;
+}
+.cardassociate img{
+    width: 100px;
+}
+.associatebutton{
+    font-size: 1.2rem;
+}
+.buttonsf{
+    border-bottom: 2px solid #ccc;
+    width: 80%;
+}
+.bordercustom{
+    margin-top: 20px;
+    padding: 8px;
+    position: relative;
+    border-radius: 8px;
+    background: linear-gradient(to right, #6eff92, #6effe9);;
+}
+.module{
+    background: #f0f0f0;
+    height: 100%;
+}
+.message-form{
+    resize: none;
+    width: 100%;
+    height: 100px;
+}
