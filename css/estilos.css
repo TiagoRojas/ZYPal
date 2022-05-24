@@ -3,14 +3,27 @@ body{
     background-color: #f0f0f0;
     font-family: 'Lato', sans-serif;
 }
+.navbar-light .navbar-nav .nav-link{
+    color: rgb(194, 194, 194);
+}
+.navbar-light .navbar-nav .nav-link:active{
+    color: rgb(194, 194, 194);
+}
+.navbar-light .navbar-nav .nav-link:hover{
+    color: rgba(255, 255, 255, 1);
+}
 .nav-item{
     border-right: 1px solid #fff;
+    transition: 0.3s;
 }
 .nav-item:first-child{
     border-left: 1px solid #fff;
 }
 .nav-item:last-child{
     border: none;
+}
+.nav-item:hover{
+    background-color: #0a58ca;
 }
 @media all and (max-width:990px){
     .nav-item{
@@ -43,7 +56,7 @@ body{
     font-size: 5rem;
     font-weight: 700;
     animation-name: desenfoque;
-    animation-duration: 1s;
+    animation-duration: 1.2s;
     animation-timing-function: ease;
     animation-iteration-count: 1;
 }
@@ -109,6 +122,9 @@ body{
     .containertext{
         width: 90%;
     }
+}
+.mova{
+    text-decoration: none;
 }
 #infoC{
     width: 70%;
