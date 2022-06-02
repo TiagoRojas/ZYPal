@@ -1,0 +1,208 @@
+@import '_font.scss';
+@import '_variables.scss';
+body{
+    background-color: map-get($colors, bg);
+    font-family: 'Lato', sans-serif;
+    font-weight: map-get($font-w, Regular);
+    @mixin noborder(){
+        border: none;
+    }
+        header{
+            .bg-primary{
+                .container-xl{
+                    .navbar{
+                        .container-fluid{
+                            .navbar-toggler{
+                                color: rgba(0, 0, 0, 0);
+                                border-color: rgba(0, 0, 0, .5);
+                            }
+                            .navbar-collapse{
+                                ul{
+                                    li{
+                                        border-right: 1px solid #fff;
+                                        .nav-link{
+                                            color: map-get($colors, navtext);
+                                            &:active{
+                                                color: map-get($colors, navtext);
+                                            }
+                                            &:hover{
+                                                color: map-get($colors, white);
+                                            }
+                                        }
+                                        &:first-child{
+                                            border-left: 1px solid map-get($colors, white);
+                                            @media all and (max-width : 990px) {
+                                                @include noborder;
+                                            }
+                                        }
+                                        &:last-child{
+                                            border: none;
+                                        }
+                                        @media all and (max-width : 990px) {
+                                            @include noborder;
+                                            a{
+                                                padding: 5px 10px;
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        .navbar-icon{
+            width: 50px;
+        }
+        .nav-item{
+            border-right: 1px solid map-get($colors, white);
+            transition: 0.3s;
+            &:first-child{
+                border-left: 1px solid map-get($colors, white);
+            }
+            &:last-child{
+                border: none;
+            }
+            &:hover{
+                background-color: map-get($colors, secondary);
+            }
+        }
+    }
+    #banner{
+        position: relative;
+        background-image: url('../assets/mainbg.jpg');
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+        min-height: 750px;
+        height: 50vh;
+        .main{
+            z-index: 2;
+            width: 100%;
+            h1{
+                font-size: 5rem;
+                font-weight: 700;
+                animation-name: desenfoque;
+                animation-duration: 1.2s;
+                animation-timing-function: ease;
+                animation-iteration-count: 1;
+            }
+            @keyframes desenfoque{
+                0%{
+                  letter-spacing: 3.5rem;
+                  filter: blur(12px);
+                  opacity: 0;
+                }
+                100%{
+                  filter: blur(0);
+                  opacity: 1;
+                }
+            } 
+        }
+        #bannercolor{
+            position: absolute;
+            background-color: rgba(13, 110, 253, 0.3);
+            width: 100%;
+            height: 100%;
+        }
+        .hero{
+            display: inline-block;
+            a{
+                font-size: 1.5rem;
+            }
+        }
+    }
+    @media all and (max-width:992px){
+        @keyframes desenfoque{
+            0%{
+              letter-spacing: 2rem;
+              filter: blur(12px);
+              opacity: 0;
+            }
+            100%{
+              filter: blur(0);
+              opacity: 1;
+            }
+        }
+    }
+    .arrow{
+        animation-name: arrow-movement;
+        animation-duration: 1.5s;
+        animation-timing-function: ease;
+        animation-iteration-count: infinite;
+        animation-direction: alternate-reverse;
+        a{
+            img{
+                width: 80px;
+            }
+        }
+        @keyframes arrow-movement{
+            0%{
+                transform: translateY(0);
+            }
+            100%{
+                transform: translateY(15px);
+            }
+        }
+        @media all and (max-width: 992px){
+            a{
+                img{
+                    margin-top: -10px;
+                }
+            }
+    }
+    }
+    .containertext{
+        width:100%;
+        .infotext{
+            font-size: 1.2rem;
+        }
+    }
+    @media all and (max-width:990px){
+        .containertext{
+            width: 90%;
+        }
+    }
+    .text{
+        width: 100%;
+        background: #f0f0f0;
+        .infotext{
+            @extend .containertext;
+            font-size: 1.2rem;
+        }
+    }
+    .bordercustom{
+        margin-top: 20px;
+        padding: 8px;
+        position: relative;
+        border-radius: 8px;
+        background: linear-gradient(to right, #6eff92, #6effe9);
+    }
+    #infoC{
+        width: 70%;
+        .module{
+            .infocard{
+                width: 33,33333%;
+                height: 100%;
+                background: #f0f0f0;
+                img{
+                    width: 80px;
+                }
+                p{
+                    font-size: 1.2rem;
+                }
+            }
+        }
+    }
+    @media all and (max-width:1250px){
+        #infoC{
+            width: 100%;
+        }
+    }
+    footer{
+        .buttonsf{
+            border-bottom: 2px solid #ccc;
+            width: 80%;
+        }
+    }    
+}
