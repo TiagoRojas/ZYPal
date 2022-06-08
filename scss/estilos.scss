@@ -198,7 +198,9 @@ body{
             box-shadow: 4px 4px 10px #3c3c3c;
             transition: all 0.3s ease-in-out;
             &:hover{
-                transform: translateY(-10px);
+                @media all and (min-width: 992px){
+                    transform: translateY(-10px);
+                }
             }
             .infocard{
                 width: 33,33333%;
@@ -291,6 +293,9 @@ body{
                 width: 100%;
                 height: 100px;
             }
+        }
+        .enviar{
+            background-color: #6ea8fe;
         }
     }
     footer{
