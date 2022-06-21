@@ -1,45 +1,36 @@
 @import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;500;700&display=swap");
 body {
   background-color: #f0f0f0;
-  font-family: 'Lato', sans-serif;
+  font-family: "Lato", sans-serif;
   font-weight: 400;
 }
-
-body header .bg-primary .container-xl .navbar .container-fluid .navbar-toggler {
+body header .bg-primary .container-xl .navbar .container-fluid .navbar-toggler, body header .bg-primary .container-xl .navbar .container-fluid .navbar-light {
   color: rgba(0, 0, 0, 0);
-  border-color: rgba(0, 0, 0, 0.5);
+  border: none;
 }
-
 body header .bg-primary .container-xl .navbar .container-fluid .navbar-collapse ul li {
   border-right: 1px solid #fff;
 }
-
 body header .bg-primary .container-xl .navbar .container-fluid .navbar-collapse ul li .nav-link {
   color: #c2c2c2;
 }
-
 body header .bg-primary .container-xl .navbar .container-fluid .navbar-collapse ul li .nav-link:active {
   color: #c2c2c2;
 }
-
 body header .bg-primary .container-xl .navbar .container-fluid .navbar-collapse ul li .nav-link:hover {
   color: #ffffff;
 }
-
 body header .bg-primary .container-xl .navbar .container-fluid .navbar-collapse ul li:first-child {
   border-left: 1px solid #ffffff;
 }
-
 @media all and (max-width: 990px) {
   body header .bg-primary .container-xl .navbar .container-fluid .navbar-collapse ul li:first-child {
     border: none;
   }
 }
-
 body header .bg-primary .container-xl .navbar .container-fluid .navbar-collapse ul li:last-child {
   border: none;
 }
-
 @media all and (max-width: 990px) {
   body header .bg-primary .container-xl .navbar .container-fluid .navbar-collapse ul li {
     border: none;
@@ -48,29 +39,22 @@ body header .bg-primary .container-xl .navbar .container-fluid .navbar-collapse 
     padding: 5px 10px;
   }
 }
-
 body header .navbar-icon {
   width: 50px;
 }
-
 body header .nav-item {
   border-right: 1px solid #ffffff;
-  -webkit-transition: 0.3s;
   transition: 0.3s;
 }
-
 body header .nav-item:first-child {
   border-left: 1px solid #ffffff;
 }
-
 body header .nav-item:last-child {
   border: none;
 }
-
 body header .nav-item:hover {
   background-color: #0a58ca;
 }
-
 body #banner {
   position: relative;
   background-image: url("../assets/mainbg.png");
@@ -80,12 +64,10 @@ body #banner {
   min-height: 750px;
   height: 50vh;
 }
-
 body #banner .main {
   z-index: 2;
   width: 100%;
 }
-
 body #banner .main h1 {
   font-size: 5rem;
   font-weight: 700;
@@ -98,79 +80,64 @@ body #banner .main h1 {
   -webkit-animation-iteration-count: 1;
           animation-iteration-count: 1;
 }
-
 @-webkit-keyframes desenfoque {
   0% {
     letter-spacing: 3.5rem;
-    -webkit-filter: blur(12px);
-            filter: blur(12px);
+    filter: blur(12px);
     opacity: 0;
   }
   100% {
-    -webkit-filter: blur(0);
-            filter: blur(0);
+    filter: blur(0);
     opacity: 1;
   }
 }
-
 @keyframes desenfoque {
   0% {
     letter-spacing: 3.5rem;
-    -webkit-filter: blur(12px);
-            filter: blur(12px);
+    filter: blur(12px);
     opacity: 0;
   }
   100% {
-    -webkit-filter: blur(0);
-            filter: blur(0);
+    filter: blur(0);
     opacity: 1;
   }
 }
-
 body #banner #bannercolor {
   position: absolute;
   background-color: rgba(13, 110, 253, 0.3);
   width: 100%;
   height: 100%;
 }
-
 body #banner .hero {
   display: inline-block;
 }
-
 body #banner .hero a {
   font-size: 1.5rem;
 }
-
 @media all and (max-width: 992px) {
   @-webkit-keyframes desenfoque {
     0% {
       letter-spacing: 2rem;
-      -webkit-filter: blur(12px);
-              filter: blur(12px);
+      filter: blur(12px);
       opacity: 0;
     }
     100% {
-      -webkit-filter: blur(0);
-              filter: blur(0);
+      filter: blur(0);
       opacity: 1;
     }
   }
   @keyframes desenfoque {
     0% {
       letter-spacing: 2rem;
-      -webkit-filter: blur(12px);
-              filter: blur(12px);
+      filter: blur(12px);
       opacity: 0;
     }
     100% {
-      -webkit-filter: blur(0);
-              filter: blur(0);
+      filter: blur(0);
       opacity: 1;
     }
   }
 }
-
 body .arrow {
   -webkit-animation-name: arrow-movement;
           animation-name: arrow-movement;
@@ -182,140 +149,109 @@ body .arrow {
           animation-iteration-count: infinite;
   animation-direction: alternate-reverse;
 }
-
 body .arrow a img {
   width: 80px;
 }
-
 @-webkit-keyframes arrow-movement {
   0% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    transform: translateY(0);
   }
   100% {
-    -webkit-transform: translateY(15px);
-            transform: translateY(15px);
+    transform: translateY(15px);
   }
 }
-
 @keyframes arrow-movement {
   0% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    transform: translateY(0);
   }
   100% {
-    -webkit-transform: translateY(15px);
-            transform: translateY(15px);
+    transform: translateY(15px);
   }
 }
-
 @media all and (max-width: 992px) {
   body .arrow a img {
     margin-top: -10px;
   }
 }
-
 body .containertext, body .text .infotext {
   width: 40%;
 }
-
 body .containertext div h2, body .text .infotext div h2 {
   font-size: 3rem;
   color: #0084ff;
 }
-
 body .containertext div .infotext, body .text .infotext div .infotext {
   font-size: 1.5rem;
   width: 90%;
   color: #3c3c3c;
 }
-
 @media all and (max-width: 992px) {
   body .containertext div .infotext, body .text .infotext div .infotext {
     font-size: 1.2rem;
   }
 }
-
 @media all and (max-width: 990px) {
   body .containertext, body .text .infotext {
     width: 90%;
   }
 }
-
 body .text {
   width: 100%;
   background: #f0f0f0;
 }
-
 body .text .infotext {
   font-size: 1.2rem;
 }
-
 body .bordercustom {
   margin-top: 20px;
   padding: 8px;
   position: relative;
   border-radius: 8px;
-  background: -webkit-gradient(linear, left top, right top, from(#6eff92), to(#6effe9));
   background: linear-gradient(to right, #6eff92, #6effe9);
 }
-
 body #infoC {
   width: 70%;
 }
-
 body #infoC .module {
-  -webkit-box-shadow: 4px 4px 10px #3c3c3c;
-          box-shadow: 4px 4px 10px #3c3c3c;
-  -webkit-transition: all 0.3s ease-in-out;
+  box-shadow: 4px 4px 10px #3c3c3c;
   transition: all 0.3s ease-in-out;
 }
-
 @media all and (min-width: 992px) {
   body #infoC .module:hover {
-    -webkit-transform: translateY(-10px);
-            transform: translateY(-10px);
+    transform: translateY(-10px);
   }
 }
-
 body #infoC .module .infocard {
-  width: 33,33333%;
+  width: 33, 33333%;
   height: 100%;
   background: #f0f0f0;
 }
-
 body #infoC .module .infocard img {
   width: 80px;
 }
-
 body #infoC .module .infocard p {
   font-size: 1.2rem;
   width: 85%;
 }
-
 @media all and (max-width: 1250px) {
   body #infoC {
     width: 100%;
   }
 }
-
 body section .image .card {
   width: 50%;
   background: #f0f0f0;
   border: none;
 }
-
 body section .heroc {
   border-bottom: 5px solid #ccc;
   width: 90%;
 }
-
 body section .heroc p {
   font-size: 1rem;
   width: 70%;
   text-align: center;
 }
-
 body section .heroc button {
   margin-top: 20px;
   padding: 25px;
@@ -324,22 +260,16 @@ body section .heroc button {
   font-size: 1.2rem;
   font-weight: 700;
 }
-
 body section .interact div button {
   width: 50%;
 }
-
 body section .interact div img {
   width: 160px;
 }
-
 @media all and (max-width: 992px) {
   body section .interact div {
-    -ms-flex-line-pack: center;
-        align-content: center;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    align-content: center;
+    align-items: center;
   }
   body section .interact div img {
     margin-left: auto;
@@ -349,35 +279,27 @@ body section .interact div img {
     width: 100%;
   }
 }
-
 body section div div h2 .accordion-button:focus {
   border-bottom: 2px solid #3c3c3c;
 }
-
 body section div div h2 .accordion-button:not(.collapsed) {
   color: #3c3c3c;
   background-color: #ffffff;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
-
 body form div .contactinput {
   font-size: 1.1rem;
   width: 100%;
 }
-
 body form div .message-form {
   resize: none;
   width: 100%;
   height: 100px;
 }
-
 body form .enviar {
   background-color: #6ea8fe;
 }
-
 body footer .buttonsf {
   border-bottom: 2px solid #ccc;
   width: 80%;
-}
-/*# sourceMappingURL=estilos.css.map */
+}/*# sourceMappingURL=estilos.css.map */

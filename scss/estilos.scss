@@ -15,9 +15,9 @@ body{
                 .container-xl{
                     .navbar{
                         .container-fluid{
-                            .navbar-toggler{
+                            .navbar-toggler, .navbar-light{
                                 color: rgba(0, 0, 0, 0);
-                                border-color: rgba(0, 0, 0, .5);
+                                border: none;
                             }
                             .navbar-collapse{
                                 ul{
